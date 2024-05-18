@@ -27,7 +27,7 @@ def run_request():
         
 
 @functions_framework.http
-def run_request(request):
+def run_prediction(request):
     input_requests = request.json
     if not isinstance(input_requests, list):
         return jsonify({'message': 'Malformed input, input should be a list of json'}), 400
